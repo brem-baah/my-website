@@ -1,0 +1,117 @@
+.gallery-section {
+  overflow: hidden;
+}
+
+.photo-album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0 60px 0;
+}
+
+.polaroid {
+  position: relative;
+  z-index: 1;
+  width: calc(25% - 30px); /* 4 columns on desktop */
+  min-width: 220px;
+  max-width: 280px;
+  transition: z-index 0s 0.3s; /* Delay z-index reset so it stays on top during scale down */
+}
+
+.polaroid-inner {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card, #13131f);
+  padding: 14px 14px 28px 14px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+  border-radius: 4px; /* Slight rounding for a sleek look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  height: 100%;
+}
+
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: var(--bg);
+}
+
+.polaroid .caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted, #7c7c9a);
+  font-family: "Lucida handwriting", "Snell Roundhand", cursive;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition);
+}
+
+/* Scattered rotations to emulate the classic photo album look */
+.polaroid-0 { transform: rotate(-5deg); margin-top: 10px; }
+.polaroid-1 { transform: rotate(3deg); margin-top: -15px; }
+.polaroid-2 { transform: rotate(-2deg); margin-top: 5px; }
+.polaroid-3 { transform: rotate(6deg); margin-top: -5px; }
+.polaroid-4 { transform: rotate(-4deg); margin-top: 20px; }
+
+.polaroid:hover {
+  z-index: 10;
+  transition-delay: 0s;
+}
+
+.polaroid:hover .polaroid-inner {
+  transform: rotate(0deg) scale(1.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+  border-color: var(--border-accent, rgba(217, 119, 6, 0.3));
+}
+
+.polaroid:hover .caption {
+  color: var(--gold, #d97706);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .polaroid {
+    width: calc(33.333% - 30px); /* 3 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .polaroid {
+    width: calc(50% - 30px); /* 2 columns */
+  }
+  .photo-album {
+    gap: 24px;
+  }
+  .polaroid:hover .polaroid-inner {
+    transform: rotate(0deg) scale(1.08); /* Less scaling on mobile so it doesn't break edges */
+  }
+}
+
+@media (max-width: 540px) {
+  .polaroid {
+    width: 85%; /* 1 column */
+    max-width: 320px;
+  }
+  /* Disable rotation on small screens for better alignment */
+  .polaroid-0, .polaroid-1, .polaroid-2, .polaroid-3, .polaroid-4 {
+    transform: rotate(0deg);
+    margin-top: 0;
+  }
+  .polaroid-inner {
+    transform: none;
+  }
+  .photo-album {
+    gap: 30px;
+  }
+}
