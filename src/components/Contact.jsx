@@ -104,37 +104,23 @@ export default function Contact() {
 
           {/* Form side */}
           <div className="reveal reveal-delay-2">
-            <div style={{
-              padding: '36px',
-              borderRadius: 20,
-              background: 'var(--card)',
-              border: '1px solid var(--border)',
-            }}>
-              <h3 style={{
-                fontFamily: 'var(--font-display)', fontWeight: 700,
-                fontSize: '1.2rem', color: '#e8e8f0', marginBottom: 8,
-              }}>
+            <div className="contact-form-card">
+              <h3 className="contact-form-title">
                 Send a Message
               </h3>
-              <p style={{ fontSize: '0.85rem', color: '#6b6b8a', marginBottom: 24 }}>
+              <p className="contact-form-desc">
                 Your message will open directly in WhatsApp — the fastest way to reach me.
               </p>
 
               {sent && (
-                <div style={{
-                  padding: '12px 16px', borderRadius: 10,
-                  background: 'rgba(34,197,94,0.1)',
-                  border: '1px solid rgba(34,197,94,0.2)',
-                  color: '#4ade80', fontSize: '0.88rem', marginBottom: 20,
-                  display: 'flex', alignItems: 'center', gap: 8,
-                }}>
+                <div className="contact-form-success">
                   <i className="fa-solid fa-circle-check" />
                   WhatsApp opened! Message is ready to send.
                 </div>
               )}
 
               <form className="contact-form" onSubmit={handleSubmit}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                <div className="form-grid">
                   <div className="form-group">
                     <label className="form-label">Name</label>
                     <input
@@ -182,7 +168,7 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                <button type="submit" className="btn btn-primary form-submit">
                   <i className="fa-brands fa-whatsapp" style={{ fontSize: '1.1rem' }} />
                   Send via WhatsApp
                 </button>

@@ -7,7 +7,7 @@ export const personal = {
   phone1: '+233 53 574 4202',
   phone2: '+233 55 886 8522',
   email: 'baahisaacbrem07@gmail.com',
-  address: 'GK-0734-4740, Ashaley Botwe, Accra, Ghana',
+  address: 'EC-0617-1029, Akim Oda, Eastern Region, Ghana',
   whatsapp: '233535744202',
   bio: [
     'I am a detail-oriented and enthusiastic Web Developer and Software Engineer with hands-on experience in building modern, scalable digital solutions. I specialize in creating responsive, user-centered websites using a robust tech stack including React, JavaScript, PHP, WordPress, and Python.',
