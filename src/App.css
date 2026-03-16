@@ -1254,7 +1254,7 @@
   .hero-badge-2 { right: 8%; bottom: 15%; }
 
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
-  .about-img { aspect-ratio: 4/3; }
+  .about-img { aspect-ratio: 3/4; }
 
   .contact-grid { grid-template-columns: 1fr; }
 

@@ -3,7 +3,7 @@ import { personal } from '../data';
 
 const chips = [
   { icon: 'fa-solid fa-location-dot', text: 'Accra, Ghana' },
-  { icon: 'fa-brands fa-react', text: 'React Developer' },
+  { icon: 'fa-brands fa-react', text: 'App Developer' },
   { icon: 'fa-solid fa-language', text: 'English · Twi · French' },
   { icon: 'fa-solid fa-robot', text: 'AI-Enhanced Builds' },
   { icon: 'fa-solid fa-briefcase', text: 'Open to Remote' },

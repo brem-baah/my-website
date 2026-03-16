@@ -13,7 +13,7 @@ import Methodology from './components/Methodology';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import OpenSource from './components/OpenSource';
+// import OpenSource from './components/OpenSource';
 import Testimonials from './components/Testimonials';
 import Blog from './components/Blog';
 import Brands from './components/Brands';
